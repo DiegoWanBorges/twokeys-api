@@ -13,7 +13,7 @@ public class ProductDTO implements Serializable {
 	private String code;
 	private String description;
 	private Double commission;
-	private Boolean outLine;
+	private boolean enable;
 	private Double averageCost;
 	private Double lastEntryCost;
 	private Double salePrice;
@@ -32,7 +32,7 @@ public class ProductDTO implements Serializable {
 	public ProductDTO() {
 	}
 
-	public ProductDTO(Long id, String code, String description, Double commission, Boolean outLine, Double averageCost,
+	public ProductDTO(Long id, String code, String description, Double commission, boolean enable, Double averageCost,
 					  Double lastEntryCost, Double salePrice, Double maxMargin, Double minPrice, Double minMargin,
 					  Double stockBalance, String barCode, Double netWeight, Double grossWeight, UnityDTO unity,
 					  SectionDTO section, DepartmentDTO department) {
@@ -40,7 +40,7 @@ public class ProductDTO implements Serializable {
 		this.code = code;
 		this.description = description;
 		this.commission = commission;
-		this.outLine = outLine;
+		this.enable = enable;
 		this.averageCost = averageCost;
 		this.lastEntryCost = lastEntryCost;
 		this.salePrice = salePrice;
@@ -61,7 +61,7 @@ public class ProductDTO implements Serializable {
 		code = entity.getCode();
 		description = entity.getDescription();
 		commission = entity.getCommission();
-		outLine = entity.getOutLine();
+		enable = entity.isEnable();
 		averageCost = entity.getAverageCost();
 		lastEntryCost = entity.getLastEntryCost();
 		salePrice = entity.getSalePrice();
@@ -110,12 +110,12 @@ public class ProductDTO implements Serializable {
 		this.commission = commission;
 	}
 
-	public Boolean getOutLine() {
-		return outLine;
+	public boolean isEnable() {
+		return enable;
 	}
 
-	public void setOutLine(Boolean outLine) {
-		this.outLine = outLine;
+	public void setEnable(boolean enable) {
+		this.enable = enable;
 	}
 
 	public Double getAverageCost() {

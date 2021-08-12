@@ -7,18 +7,18 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="tb_department")
-public class Department implements Serializable {
+@Table(name="tb_line_business")
+public class LineBusiness implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
 	private Long id;
 	private String name;
 	
-	public Department() {
+	public LineBusiness() {
 	}
 
-	public Department(Long id, String name) {
+	public LineBusiness(Long id, String name) {
 		this.id = id;
 		this.name = name;
 	}
@@ -55,7 +55,7 @@ public class Department implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Department other = (Department) obj;
+		LineBusiness other = (LineBusiness) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;

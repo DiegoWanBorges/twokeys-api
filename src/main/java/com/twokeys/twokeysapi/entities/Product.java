@@ -21,7 +21,7 @@ public class Product implements Serializable {
 	private String code;
 	private String description;
 	private Double commission;
-	private Boolean outLine;
+	private boolean enable;
 	private Double averageCost;
 	private Double lastEntryCost;
 	private Double salePrice;
@@ -51,7 +51,7 @@ public class Product implements Serializable {
 	public Product() {
 	}
 
-	public Product(Long id, String code, String description, Double commission, Boolean outLine, Double averageCost,
+	public Product(Long id, String code, String description, Double commission, boolean enable, Double averageCost,
 			Double lastEntryCost, Double salePrice, Double maxMargin, Double minPrice, Double minMargin,
 			Double stockBalance, String barCode, Double netWeight, Double grossWeight, Unity unity, Section section,
 			Department department) {
@@ -59,7 +59,7 @@ public class Product implements Serializable {
 		this.code = code;
 		this.description = description;
 		this.commission = commission;
-		this.outLine = outLine;
+		this.enable = enable;
 		this.averageCost = averageCost;
 		this.lastEntryCost = lastEntryCost;
 		this.salePrice = salePrice;
@@ -107,12 +107,12 @@ public class Product implements Serializable {
 		this.commission = commission;
 	}
 
-	public Boolean getOutLine() {
-		return outLine;
+	public boolean isEnable() {
+		return enable;
 	}
 
-	public void setOutLine(Boolean outLine) {
-		this.outLine = outLine;
+	public void setEnable(boolean enable) {
+		this.enable = enable;
 	}
 
 	public Double getAverageCost() {

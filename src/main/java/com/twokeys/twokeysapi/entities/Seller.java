@@ -1,26 +1,33 @@
 package com.twokeys.twokeysapi.entities;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="tb_department")
-public class Department implements Serializable {
+@Table(name="tb_seller")
+public class Seller implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
 	private Long id;
 	private String name;
+	private Double commission;
+	private boolean enable;
+	private LocalDateTime lastConection;
 	
-	public Department() {
+	public Seller() {
 	}
 
-	public Department(Long id, String name) {
+	public Seller(Long id, String name, Double commission, boolean enable, LocalDateTime lastConection) {
 		this.id = id;
 		this.name = name;
+		this.commission = commission;
+		this.enable = enable;
+		this.lastConection = lastConection;
 	}
 
 	public Long getId() {
@@ -39,6 +46,30 @@ public class Department implements Serializable {
 		this.name = name;
 	}
 
+	public Double getCommission() {
+		return commission;
+	}
+
+	public void setCommission(Double commission) {
+		this.commission = commission;
+	}
+
+	public boolean isEnable() {
+		return enable;
+	}
+
+	public void setEnable(boolean enable) {
+		this.enable = enable;
+	}
+
+	public LocalDateTime getLastConection() {
+		return lastConection;
+	}
+
+	public void setLastConection(LocalDateTime lastConection) {
+		this.lastConection = lastConection;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -55,7 +86,7 @@ public class Department implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Department other = (Department) obj;
+		Seller other = (Seller) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -63,7 +94,4 @@ public class Department implements Serializable {
 			return false;
 		return true;
 	}
-	
-	
-	
 }
