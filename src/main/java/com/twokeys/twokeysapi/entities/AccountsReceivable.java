@@ -12,7 +12,7 @@ import javax.persistence.Table;
 import com.twokeys.twokeysapi.entities.pk.AccountsReceivablePK;
 
 @Entity
-@Table(name = "tb_client")
+@Table(name = "tb_accounts_receivable")
 public class AccountsReceivable implements Serializable {
 	private static final long serialVersionUID = 1L;
 
