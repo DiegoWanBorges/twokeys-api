@@ -28,11 +28,11 @@ public class AccountsReceivable implements Serializable {
 	private Seller seller;
 
 	@ManyToOne
-	@JoinColumn(name = "formPayment_id")
+	@JoinColumn(name = "form_payment_id")
 	private FormPayment formPayment;
 
 	@ManyToOne
-	@JoinColumn(name = "paymentPlan_id")
+	@JoinColumn(name = "payment_plan_id")
 	private PaymentPlan paymentPlan;
 
 	private LocalDate issueDate;
@@ -127,6 +127,4 @@ public class AccountsReceivable implements Serializable {
 	public void setValue(Double value) {
 		this.value = value;
 	}
-	
-	
 }
