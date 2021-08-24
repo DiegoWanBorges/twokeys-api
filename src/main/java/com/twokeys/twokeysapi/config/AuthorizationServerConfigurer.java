@@ -53,6 +53,7 @@ public class AuthorizationServerConfigurer extends AuthorizationServerConfigurer
 		.secret(passwordEncoder.encode(clientSecret))
 		.scopes("read","write")
 		.authorizedGrantTypes("password")
+		.additionalInformation("schema")
 		.accessTokenValiditySeconds(jwtDuration);
 		
 	}

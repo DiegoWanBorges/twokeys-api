@@ -197,7 +197,7 @@
        id bigint not null,
         commission double precision,
         enable bit not null,
-        lastConection datetime(6),
+        lastConection datetime,
         name varchar(255),
         primary key (id)
     ) engine=InnoDB;
@@ -370,3 +370,18 @@
        add constraint FK7vn3h53d0tqdimm8cp45gc0kl 
        foreign key (user_id) 
        references tb_user (id);
+
+INSERT INTO tb_user (NAME,login,PASSWORD) VALUES ('Diego Wandrofski Borges','diego@gmail.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
+INSERT INTO tb_user (NAME,login,PASSWORD) VALUES ('Machado de Assis','machado@gmail.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
+INSERT INTO tb_user (NAME,login,PASSWORD) VALUES ('José de Alencar','jose@gmail.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
+INSERT INTO tb_user (NAME,login,PASSWORD) VALUES ('Monteiro Lobato','monteiro@gmail.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
+
+INSERT INTO tb_role (authority,description) VALUES ('ROLE_MASTER','System Admin');
+INSERT INTO tb_role (authority,description) VALUES ('ROLE_ADMIN','Company Admin');
+INSERT INTO tb_role (authority,description) VALUES ('ROLE_SELLER','Seller');
+
+
+INSERT INTO tb_user_role (user_id, role_id) VALUES (1, 1);
+INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 2);
+INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 3);
+INSERT INTO tb_user_role (user_id, role_id) VALUES (4, 3);

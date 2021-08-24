@@ -2,7 +2,7 @@ package com.twokeys.twokeysapi.config.multitenant;
 
 public class TenantContext {
 
-    final public static String DEFAULT_TENANT = "CLIENTE_1";
+    final public static String DEFAULT_TENANT = "CONTROLE";
 
     private static final ThreadLocal<String> currentTenant = ThreadLocal.withInitial(() -> DEFAULT_TENANT);
 
